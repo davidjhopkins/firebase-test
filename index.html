@@ -2,22 +2,39 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Firebase demo">
+    <meta name="author" content="David Hopkins">
     <title>Firebase clearing demo</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
   </head>
   <body>
 
-    <div class="clearing-form">
-      <input type="text" id="clearing-form__field--name" placeholder="Name">
-      <input type="text" id="clearing-form__field--grade" placeholder="Grade">
-      <input type="text" id="clearing-form__field--places" placeholder="Places">
-      <input type="Submit" value ="Add" id="clearing-form__field__button">
+    <div class="container">
+
+      <div class="clearing-form">
+        <input type="text" id="clearing-form__field--name" placeholder="Name">
+        <input type="text" id="clearing-form__field--grade" placeholder="Grade">
+        <input type="text" id="clearing-form__field--places" placeholder="Places">
+        <input type="Submit" value ="Add" id="clearing-form__field__button">
+      </div>
+      <input type="Submit" value ="Delete" id="deleteItem">
+      <hr class="item-divider"/>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Places</th>
+          </tr>
+        </thead>
+        <tbody id="clearing-opportunities-table">
+        </tbody>
+      </table>
+
     </div>
-
-    <hr class="item-divider"/>
-
-    <input type="Submit" value ="Delete" id="deleteItem">
-    <div id='clearing-opportunities'></div>
-
 
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src='main.js'></script>
