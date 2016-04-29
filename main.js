@@ -8,9 +8,9 @@ document.getElementById("clearing-form__field__button").addEventListener("click"
 
   myDataRef.push({name: name, grade: grade, places: places});
 
-  name = document.getElementById("clearing-form__field--name").value = '';
-  grade = document.getElementById("clearing-form__field--grade").value = '';
-  places =document.getElementById("clearing-form__field--places").value = '';
+  document.getElementById("clearing-form__field--name").value = '';
+  document.getElementById("clearing-form__field--grade").value = '';
+  document.getElementById("clearing-form__field--places").value = '';
 });
 
 myDataRef.on('child_added', function(snapshot) {
